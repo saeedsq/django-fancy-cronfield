@@ -1,0 +1,2 @@
+django==1.5
+python-crontab==1.9.3
