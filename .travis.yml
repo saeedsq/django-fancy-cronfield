@@ -13,7 +13,10 @@ install:
 
 script:
   - pep8 fancy_cronfield
-  - python setup.py test
+  - coverage run --parallel-mode setup.py test
+  - coverage combine
+
+after_success: coveralls
 
 notifications:
   irc:
