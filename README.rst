@@ -11,6 +11,9 @@ Django Fancy Cron Field
     :target: https://pypi.python.org/pypi/django-fancy-cronfield/
 .. image:: https://img.shields.io/pypi/l/django-fancy-cronfield.svg
     :target: https://pypi.python.org/pypi/django-fancy-cronfield/
+.. image:: https://readthedocs.org/projects/django-fancy-cronfield/badge/?version=latest
+    :target: http://django-fancy-cronfield.readthedocs.org/en/latest/?badge=latest
+    :alt: Documentation Status
 .. image:: https://codeclimate.com/github/saeedsq/django-fancy-cronfield/badges/gpa.svg
    :target: https://codeclimate.com/github/saeedsq/django-fancy-cronfield
    :alt: Code Climate
