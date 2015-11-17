@@ -14,8 +14,6 @@ Django Fancy Cron Field
 .. image:: https://codeclimate.com/github/saeedsq/django-fancy-cronfield/badges/gpa.svg
    :target: https://codeclimate.com/github/saeedsq/django-fancy-cronfield
    :alt: Code Climate
-.. image:: https://codeclimate.com/github/saeedsq/django-fancy-cronfield/badges/coverage.svg
-    :target: https://codeclimate.com/github/saeedsq/django-fancy-cronfield/coverage
 
 A nice and customizable cron field with great, easy to use UI.
 
