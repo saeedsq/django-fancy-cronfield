@@ -88,8 +88,8 @@ class CronValidatorTestCases(TestCase):
             try:
                 cron_validator(cron)
             except ValidationError:
-                self.fail("CronValidator raised ValidationError for %s with limit %s"
-                          % (cron, daily_limit))
+                failure_message = "CronValidator raised ValidationError for %s with limit %s"
+                self.fail(failure_message % (cron, daily_limit))
 
         # Cron string exceeds daily frequency limit
         crons = {
