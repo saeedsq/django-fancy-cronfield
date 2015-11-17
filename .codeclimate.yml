@@ -1,0 +1,6 @@
+languages:
+   JavaScript: true
+   Python: true
+exclude_paths:
+- "test/*"
+- "docs/*"
