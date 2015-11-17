@@ -9,6 +9,12 @@ from django.core.exceptions import ValidationError
 
 
 class CronValidator(BaseValidator):
+    """ Cron format validator which does the following actions:
+
+        - Ensures that the cron string is a valid cron format
+        - Ensures that the cron frequency per day is less than `limit_value`
+
+    """
     code = "cron"
     message = _("Ensure that your selected timing runs at most %(limit_value)s times per day, it runs %(show_value)s times per day.")
     error_messages = {
@@ -16,10 +22,16 @@ class CronValidator(BaseValidator):
     }
 
     def clean(self, value):
+        """ Ensures that the given value is a valid cron format
+        and strips it.
+
+        :param value: cron string
+        :return: Stripped value string
+        """
         cron = CronTab().new()
-        if value and not cron.setall(value):
+        if value and not cron.setall(value.strip()):
             raise ValidationError(self.error_messages['invalid_cron'])
-        return value
+        return value.strip()
 
     def __call__(self, value):
         cleaned_value = self.clean(value)
