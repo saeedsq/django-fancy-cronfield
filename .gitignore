@@ -6,3 +6,6 @@
 *.xml
 *.sqlite
 .idea
+build
+dist
+django_fancy_cronfield.egg-info

@@ -1,2 +1,8 @@
+include AUTHORS
+include LICENSE
 include README.rst
-graft fancy_cronfield/static
+include CHANGELOG.txt
+recursive-include fancy_cronfield/locale *
+recursive-include fancy_cronfield/static *
+recursive-include docs *
+recursive-exclude * *.pyc
