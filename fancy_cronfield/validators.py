@@ -17,7 +17,7 @@ class CronValidator(BaseValidator):
     """
     code = "cron"
     message = ' '.join([
-        _("Ensure that your selected timing runs at most %(limit_value)s times per day."),
+        _("Ensure the timing runs at most %(limit_value)s times per day."),
         _("It runs %(show_value)s times per day.")
     ])
     error_messages = {
