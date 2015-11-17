@@ -19,7 +19,7 @@ CLASSIFIERS = [
 ]
 
 INSTALL_REQUIREMENTS = [
-    'django==1.5',
+    'django>=1.5,<1.6',
     'python-crontab==1.9.3',
 ]
 
