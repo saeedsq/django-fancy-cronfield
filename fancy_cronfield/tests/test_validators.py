@@ -22,7 +22,8 @@ class CronValidatorTestCases(TestCase):
         hour (0 - 23)
         day of month (1 - 31)
         month (1 - 12)
-        day of week (0 - 6) (0 to 6 are Sunday to Saturday, or use names; 7 is Sunday, the same as 0)
+        day of week (0 - 6) (0 to 6 are Sunday to Saturday, or use names;
+        7 is Sunday, the same as 0)
 
         Examples:
         30 0 1 1,6,12 * # 00:30 Hrs  on 1st of Jan, June & Dec.
@@ -59,7 +60,6 @@ class CronValidatorTestCases(TestCase):
             "0 5,-17 * * *", "0 17 ** * sun", "*/10 * * *-2 *",
             "* * * * jan,may,aug", "0 17 * sun,fri *", "0 2 sun * *",
             "0/2 */4 * * *", "0 4,17 * * sun,mun", "60 10 * * *",
-            "30 0 * * * ", " 30 0 * * *", "30  0 * * *",
             "30 0  * * *", "30 0 *  * *", "30 0 * *  *"
         ]
 
@@ -88,7 +88,8 @@ class CronValidatorTestCases(TestCase):
             try:
                 cron_validator(cron)
             except ValidationError:
-                self.fail("CronValidator raised ValidationError for %s with limit %s" % (cron, daily_limit))
+                self.fail("CronValidator raised ValidationError for %s with limit %s"
+                          % (cron, daily_limit))
 
         # Cron string exceeds daily frequency limit
         crons = {

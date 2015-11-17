@@ -23,13 +23,16 @@ INSTALL_REQUIREMENTS = [
     'python-crontab==1.9.3',
 ]
 
+readme_path = os.path.join(os.path.dirname(__file__), 'README.rst')
+long_description = open(readme_path).read()
+
 setup(
     name="django-fancy-cronfield",
     author="Saeed Salehian",
     author_email="saeed.sq@gmail.com",
     version=fancy_cronfield.__version__,
-    description="A nice and customizable cronfield with great, easy to use UI.",
-    long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
+    description="A nice and customizable cronfield",
+    long_description=long_description,
     url='https://github.com/saeedsq/django-fancy-cronfield',
     license='BSD License',
     platforms=['OS Independent'],

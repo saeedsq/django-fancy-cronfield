@@ -41,7 +41,10 @@ class CronValidator(BaseValidator):
             cron.setall(cleaned_value)
 
             if cron.frequency_per_day() > self.limit_value:
-                params = {'limit_value': self.limit_value, 'show_value': cron.frequency_per_day()}
+                params = {
+                    'limit_value': self.limit_value,
+                    'show_value': cron.frequency_per_day()
+                }
                 raise ValidationError(
                     self.message % params,
                     code=self.code,
