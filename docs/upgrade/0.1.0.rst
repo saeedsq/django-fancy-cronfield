@@ -1,0 +1,6 @@
+==============================================
+Django Fancy Cronfield Release Notes |release|
+==============================================
+
+.. todo::
+    Issue #4 - Write release notes
