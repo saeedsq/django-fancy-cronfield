@@ -5,6 +5,10 @@ Django Fancy Cron Field
     :target: http://travis-ci.org/saeedsq/django-fancy-cronfield
 .. image:: https://img.shields.io/pypi/v/django-fancy-cronfield.svg
     :target: https://pypi.python.org/pypi/django-fancy-cronfield/
+.. image:: https://img.shields.io/pypi/pyversions/django-fancy-cronfield.svg
+    :target: https://pypi.python.org/pypi/django-fancy-cronfield/
+.. image:: https://img.shields.io/pypi/status/django-fancy-cronfield.svg
+    :target: https://pypi.python.org/pypi/django-fancy-cronfield/
 .. image:: https://img.shields.io/pypi/dm/django-fancy-cronfield.svg
     :target: https://pypi.python.org/pypi/django-fancy-cronfield/
 .. image:: https://img.shields.io/badge/wheel-yes-green.svg
