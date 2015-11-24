@@ -1,0 +1,26 @@
+- Put cola in fridge for cooling (see last step)
+- Create a release branch (locally)
+- Bump the version in fancy_cronfield/__init__.py
+- Build newest english translation (django-admin.py makemessages -l en)
+- Build newest english JS translations (django-admin.py makemessages -l en -d djangojs)
+- Pull translations
+- Compile translations (django-admin.py compilemessages)
+- Make sure js files are bundled and minified properly from latest source
+- Check CHANGELOG that all closed PRs are present.
+- Prepare blog post, including "Release" tag
+- update AUTHORS file
+- Make a release commit
+- Tag release commit
+- Merge back into develop
+- Push develop to GitHub
+- Merge into master
+- Push master to GitHub (WITH --tags)
+- Release to PyPI (ONLY FOR FINAL VERSIONS!) (python setup.py sdist upload)
+- Release wheel (python setup.py bdist_wheel upload)
+- Bump version in develop branch to .dev1
+- Publish blog post
+- Tweet blog post
+- Post notice on django-users, django-fancy-cronfield and django-fancy-cronfield-developers mailing lists
+- Update IRC channel topic (/topic this is the new topic)
+- Make sure tutorials on the website still work
+- Have a cola! (If anyone else is around, do a release party!)
