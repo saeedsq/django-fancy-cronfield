@@ -1,72 +1,28 @@
 #!/usr/bin/env python
 # vim: ai ts=4 sts=4 et sw=4
 
+import os
 import sys
+import django
+from django.conf import settings
 
-try:
-    from django.conf import settings
-
-    settings.configure(
-        DEBUG=True,
-        LANGUAGE_CODE='en-us',
-        ALLOWED_HOSTS=[],
-        DATABASES={
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': 'fancy_cronfield',
-            }
-        },
-        TIME_ZONE='Asia/Tehran',
-        USE_I18N=True,
-        USE_L10N=True,
-        USE_TZ=True,
-        ROOT_URLCONF='',
-        INSTALLED_APPS=(
-            'django.contrib.auth',
-            'django.contrib.contenttypes',
-            'django.contrib.sites',
-            'fancy_cronfield',
-        ),
-        SITE_ID=1,
-        MIDDLEWARE_CLASSES=(
-            'django.contrib.sessions.middleware.SessionMiddleware',
-            'django.contrib.messages.middleware.MessageMiddleware',
-        ),
-    )
-
-    try:
-        import django
-
-        setup = django.setup
-    except AttributeError:
-        pass
-    else:
-        setup()
-
-except ImportError:
-    import traceback
-
-    traceback.print_exc()
-    raise ImportError('To fix this error, run: pip install -r test_requirements/base.txt')
+from fancy_cronfield.utils.compat import DJANGO_1_5, DJANGO_1_6
 
 
 def main(*test_args):
     if not test_args:
         test_args = ['fancy_cronfield']
 
-    # Run tests
-    try:
-        # Django <= 1.8
-        from django.test.simple import DjangoTestSuiteRunner
-        test_runner = DjangoTestSuiteRunner(verbosity=1)
-    except ImportError:
-        # Django >= 1.8
-        from django.test.runner import DiscoverRunner
-        test_runner = DiscoverRunner(verbosity=1)
+    os.environ['DJANGO_SETTINGS_MODULE'] = 'fancy_cronfield.tests.settings'
+    from django.test.utils import get_runner
 
+    if not (DJANGO_1_5 or DJANGO_1_6):
+        django.setup()
+
+    test_runner_class = get_runner(settings)
+    test_runner = test_runner_class()
     failures = test_runner.run_tests(test_args)
-    sys.exit(failures)
-
+    sys.exit(bool(failures))
 
 if __name__ == '__main__':
     main(*sys.argv[1:])

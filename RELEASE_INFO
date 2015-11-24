@@ -22,5 +22,7 @@
 - Tweet blog post
 - Post notice on django-users, django-fancy-cronfield and django-fancy-cronfield-developers mailing lists
 - Update IRC channel topic (/topic this is the new topic)
+- Add current version to RTD versions.
+- Set new version as default version on RTD
 - Make sure tutorials on the website still work
 - Have a cola! (If anyone else is around, do a release party!)

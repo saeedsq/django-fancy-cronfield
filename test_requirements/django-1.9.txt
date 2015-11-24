@@ -1,0 +1,2 @@
+-r base.txt
+https://github.com/django/django/tarball/stable/1.9.x/django.tar.gz#egg=django

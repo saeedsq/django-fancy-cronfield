@@ -8,18 +8,27 @@ import fancy_cronfield
 CLASSIFIERS = [
     'Development Status :: 3 - Alpha',
     'Environment :: Web Environment',
-    'Framework :: Django :: 1.5',
-    'Operating System :: OS Independent',
-    'Programming Language :: Python :: 2.6',
-    'Programming Language :: Python :: 2.7',
+    'Framework :: Django',
     'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
     'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     'Topic :: Software Development',
     'Topic :: Software Development :: Libraries :: Application Frameworks',
+    'Programming Language :: Python :: 2.6',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3.3',
+    'Programming Language :: Python :: 3.4',
+    'Framework :: Django',
+    'Framework :: Django :: 1.5',
+    'Framework :: Django :: 1.6',
+    'Framework :: Django :: 1.7',
+    'Framework :: Django :: 1.8',
 ]
 
 INSTALL_REQUIREMENTS = [
-    'django>=1.5,<1.6',
+    'django>=1.5,<1.9',
     'python-crontab==1.9.3',
 ]
 
