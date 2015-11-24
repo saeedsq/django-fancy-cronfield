@@ -1,5 +1,4 @@
 === 0.1.0 (Unreleased) ===
 
-- CronField, CronWidget and CronValidator are implemented
-- Gentle select UI implemented
+- CronField and CronValidator are implemented
 - Ability to specify a daily_limit for CronField
