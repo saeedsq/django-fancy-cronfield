@@ -30,7 +30,7 @@ A nice and customizable cron field with great, easy to use UI.
    It's the branch for features that will go into the next django fancy cronfield feature release.
 
    For fixes for 0.1.x releases, please work on support/0.1.x which
-   contains the next patch release for 3.1.x series.
+   contains the next patch release for 0.1.x series.
 
    The **master** branch is the current stable release, the one released on PyPI.
    Changes based on **master** will not be accepted.
