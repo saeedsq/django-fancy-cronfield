@@ -29,6 +29,9 @@ A nice and customizable cron field with great, easy to use UI.
 .. ATTENTION:: To propose features, always open pull requests on the **develop** branch.
    It's the branch for features that will go into the next django fancy cronfield feature release.
 
+   For fixes for 0.1.x releases, please work on support/0.1.x which
+   contains the next patch release for 3.1.x series.
+
    The **master** branch is the current stable release, the one released on PyPI.
    Changes based on **master** will not be accepted.
 
@@ -39,14 +42,14 @@ Features
 
 - Cron format validation
 - Custom django field
-- Gentle select UI
 - Ability to specify a daily run limit
 
 ************
 Requirements
 ************
 
-Fancy cron field requires Django 1.5, Python 2.6 and python-crontab 1.9.3
+Fancy cron field requires Django version 1.5 up to 1.8.7, Python 2.6, 2.7, 3.3, 3.4
+and python-crontab 1.9.3.
 
 ************
 Installation

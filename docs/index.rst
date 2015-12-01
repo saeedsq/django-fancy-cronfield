@@ -11,8 +11,7 @@ Welcome to Django Fancy Cronfield's documentation!
 Overview
 ********
 
-Django fancy cronfield is a nice and customizable
-cron field with great, easy to use UI.
+Django fancy cronfield is a nice and customizable cron field.
 
 **Developers** who want to learn more about Django Fancy Cronfield, as well as
 how to install, use and customise it for their own projects will can
@@ -30,7 +29,6 @@ Features
 
 - Cron format validation
 - Custom django field
-- Gentle select UI
 - Ability to specify a daily run limit
 
 *************
