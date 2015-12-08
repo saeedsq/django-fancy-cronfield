@@ -1,4 +1,6 @@
+python-crontab==1.9.3
+pep8
 unittest2
 coverage==4.0.2
 python-coveralls==2.5.0
-python-crontab==1.9.3
+codacy-coverage

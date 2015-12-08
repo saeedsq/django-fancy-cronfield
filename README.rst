@@ -20,6 +20,11 @@ Django Fancy Cron Field
 .. image:: https://readthedocs.org/projects/django-fancy-cronfield/badge/?version=latest
     :target: http://django-fancy-cronfield.readthedocs.org/en/latest/?badge=latest
     :alt: Documentation Status
+.. image:: https://landscape.io/github/saeedsq/django-fancy-cronfield/develop/landscape.svg?style=flat
+   :target: https://landscape.io/github/saeedsq/django-fancy-cronfield/develop
+   :alt: Code Health
+.. image:: https://api.codacy.com/project/badge/grade/1c49af5cdb564cfe979d26384436c85f
+    :target: https://www.codacy.com/app/saeed-sq/django-fancy-cronfield
 .. image:: https://codeclimate.com/github/saeedsq/django-fancy-cronfield/badges/gpa.svg
    :target: https://codeclimate.com/github/saeedsq/django-fancy-cronfield
    :alt: Code Climate
@@ -48,8 +53,8 @@ Features
 Requirements
 ************
 
-Fancy cron field requires Django version 1.5 up to 1.8.7, Python 2.6, 2.7, 3.3, 3.4
-and python-crontab 1.9.3.
+Fancy cron field requires Django version 1.5 up to 1.8.7, Python 2.6, 2.7, 3.3,
+3.4 and python-crontab 1.9.3.
 
 ************
 Installation

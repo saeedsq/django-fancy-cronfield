@@ -9,3 +9,4 @@
 build
 dist
 django_fancy_cronfield.egg-info
+.pypirc

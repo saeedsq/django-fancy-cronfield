@@ -15,14 +15,19 @@ env:
 
 install:
   - pip install -r "test_requirements/django-$DJANGO.txt"
-  - pip install pep8
+
+before_script:
+    - export CODACY_PROJECT_TOKEN=601e488b40614acda119fca134b67d06
 
 script:
   - pep8 fancy_cronfield
-  - coverage run --parallel-mode setup.py test
+  - coverage run --branch --parallel-mode setup.py test
   - coverage combine
+  - coverage xml -o coverage.xml
 
-after_success: coveralls
+after_success:
+  - coveralls
+  - python-codacy-coverage -r coverage.xml
 
 notifications:
   irc:

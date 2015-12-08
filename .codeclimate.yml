@@ -1,6 +1,12 @@
-languages:
-   JavaScript: true
-   Python: true
+engines:
+    pep8:
+       enabled: true
+    radon: true
+    config:
+      threshold: "B"
+ratings:
+ paths:
+  -"**.py"
 exclude_paths:
-- "test/*"
-- "docs/*"
+ - docs/**
+ - nargeelcms/tests/**
