@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # vim: ai ts=4 sts=4 et sw=4
 
-from setuptools import setup
+from setuptools import setup, find_packages
 import os
 import fancy_cronfield
 
@@ -48,7 +48,7 @@ setup(
     classifiers=CLASSIFIERS,
     install_requires=INSTALL_REQUIREMENTS,
     extras_require={},
-    packages=["fancy_cronfield"],
+    packages=find_packages(exclude=[]),
     include_package_data=True,
     zip_safe=False,
     test_suite='runtests.main',

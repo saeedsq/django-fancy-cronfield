@@ -20,11 +20,13 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
 sys.path.append(os.path.abspath('..'))
-from django.conf import settings
+from django.conf import settings  # NOQA
+import django
 
 settings.configure(
+    SECRET_KEY='fake-key',
     DEBUG=True,
-    LANGUAGE_CODE='en-us',
+    LANGUAGE_CODE='en',
     ALLOWED_HOSTS=[],
     DATABASES={
         'default': {
@@ -38,9 +40,12 @@ settings.configure(
     USE_TZ=True,
     ROOT_URLCONF='',
     INSTALLED_APPS=(
+        'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
-        'django.contrib.sites',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
         'fancy_cronfield',
     ),
     SITE_ID=1,
@@ -48,7 +53,23 @@ settings.configure(
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
     ),
+    TEMPLATES=[
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
+        },
+    ]
 )
+django.setup()
 
 # -- General configuration ------------------------------------------------
 
@@ -154,6 +175,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if not on_rtd:  # only import and set the theme if we're building docs locally
     try:
         import sphinx_rtd_theme
+
         html_theme = 'sphinx_rtd_theme'
         html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     except ImportError:
@@ -283,7 +305,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'DjangoFancyCronfield.tex', u'Django Fancy Cronfield Documentation',
+    (master_doc, 'DjangoFancyCronfield.tex',
+     u'Django Fancy Cronfield Documentation',
      u'Saeed Salehian', 'manual'),
 ]
 
@@ -313,7 +336,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'djangofancycronfield', u'Django Fancy Cronfield Documentation',
+    (master_doc, 'djangofancycronfield',
+     u'Django Fancy Cronfield Documentation',
      [author], 1)
 ]
 
@@ -327,7 +351,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'DjangoFancyCronfield', u'Django Fancy Cronfield Documentation',
+    (master_doc, 'DjangoFancyCronfield',
+     u'Django Fancy Cronfield Documentation',
      author, 'DjangoFancyCronfield', 'One line description of project.',
      'Miscellaneous'),
 ]

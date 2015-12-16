@@ -8,4 +8,5 @@ Technical reference material.
     :maxdepth: 2
 
     fields
+    widgets
     validators

@@ -3,7 +3,7 @@
 
 DEBUG = True
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 ALLOWED_HOSTS = []
 

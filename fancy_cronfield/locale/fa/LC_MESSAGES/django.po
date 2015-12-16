@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-01 13:36+0330\n"
+"POT-Creation-Date: 2015-12-16 01:28+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\validators.py:20
+#: .\fancy_cronfield\fields.py:23
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: .\fancy_cronfield\validators.py:20
 #, python-format
 msgid "Ensure the timing runs at most %(limit_value)s times per day."
 msgstr ""
 
-#: .\validators.py:21
+#: .\fancy_cronfield\validators.py:21
 #, python-format
 msgid "It runs %(show_value)s times per day."
 msgstr ""
 
-#: .\validators.py:24
+#: .\fancy_cronfield\validators.py:24
 msgid "Ensure that your selected timing is valid."
 msgstr ""

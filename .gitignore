@@ -10,3 +10,8 @@ build
 dist
 django_fancy_cronfield.egg-info
 .pypirc
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+htmlcov

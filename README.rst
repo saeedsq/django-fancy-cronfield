@@ -68,7 +68,8 @@ Installation
 Basic usage
 ***********
 
-Use it like any regular model field:
+Add `'fancy_cronfield'` to your `INSTALLED_APPS`, then use `CronField` like
+any regular model field:
 
 .. code:: python
 
@@ -85,3 +86,10 @@ Getting Help
 ************
 
 Please Write to our `mailing list <https://groups.google.com/forum/#!forum/django-fancy-cronfield>`_.
+
+*******
+Credits
+*******
+
+* Crontab API features borrowed from
+  `python-crontab <https://code.launchpad.net/python-crontab>`_.

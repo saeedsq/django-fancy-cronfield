@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-16 01:28+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:49
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:3
+msgid "Minutes Past the Hour"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:56
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:3
+msgid "Time: Hour"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:63
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:3
+msgid "Day of Month"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:84
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:4
+msgid "Time: Minute"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:125
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "%(day)sst"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:128
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "%(day)snd"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:131
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "%(day)srd"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:134
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "%(day)sth"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:143
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "January"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:143
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "February"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:143
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "March"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:144
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "April"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:144
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "May"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:144
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "June"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "July"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "August"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "September"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:146
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "October"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:146
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "November"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:147
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "December"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:156
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "Sunday"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:156
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "Monday"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:156
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "Tuesday"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:157
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "Wednesday"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:157
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "Thursday"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:158
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "Friday"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:158
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "Saturday"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:165
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "minute"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:165
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "hour"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:165
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "day"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:166
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "week"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:166
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "month"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:166
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "year"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:345
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:8
+msgid "Every"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:360
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:9
+msgid "on the"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:372
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:10
+msgid "of"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:384
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:409
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:10
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:12
+msgid "at"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:386
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:10
+msgid "minutes past the hour"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:397
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:11
+msgid "on"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:548
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:18
+msgid "An error occured when submitting your request. Try again?"
+msgstr ""
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-gentleSelect.js:30
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-gentleSelect.min.js:4
+msgid "Make A Selection"
+msgstr ""
