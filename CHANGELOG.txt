@@ -1,6 +1,7 @@
-=== 0.2.0 (Unreleased) ===
+=== 0.2.0 (2015-12-17) ===
 
-- Gentle select UI for cronfield
+- Added CronWidget for CronField providing gentle select UI
+- Added support for django 1.9
 
 === 0.1.1 (2015-12-01) ===
 
