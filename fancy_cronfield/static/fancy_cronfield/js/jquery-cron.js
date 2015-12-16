@@ -106,8 +106,9 @@
 
     // options for minutes in an hour
     var str_opt_mih = '';
+    var j = 0;
     for (var i = 0; i < 60; i++) {
-        var j = (i < 10) ? '0' : '';
+        j = (i < 10) ? '0' : '';
         str_opt_mih += "<option value='" + i + "'>" + j + i + '</option>\n';
     }
 
@@ -146,7 +147,7 @@
                   gettext('July'), gettext('August'), gettext('September'),
                   gettext('October'), gettext('November'),
                   gettext('December')];
-    for (var i = 0; i < months.length; i++) {
+    for (i = 0; i < months.length; i++) {
         str_opt_month += "<option value='" + (i + 1) + "'>";
         str_opt_month += months[i];
          str_opt_month += '</option>\n';
@@ -157,7 +158,7 @@
     var days = [gettext('Sunday'), gettext('Monday'), gettext('Tuesday'),
                 gettext('Wednesday'), gettext('Thursday'),
                 gettext('Friday'), gettext('Saturday')];
-    for (var i = 0; i < days.length; i++) {
+    for (i = 0; i < days.length; i++) {
         str_opt_dow += "<option value='" + i + "'>" + days[i] + '</option>\n';
     }
 
@@ -165,7 +166,7 @@
     var str_opt_period = '';
     var periods = [gettext('minute'), gettext('hour'), gettext('day'),
                    gettext('week'), gettext('month'), gettext('year')];
-    for (var i = 0; i < periods.length; i++) {
+    for (i = 0; i < periods.length; i++) {
         str_opt_period += "<option value='" + periods[i] + "'>";
          str_opt_period += periods[i];
          str_opt_period += '</option>\n';
@@ -494,7 +495,9 @@
                     var btgt;
                     if (tgt === 'time') {
                         btgt = block[tgt].find('select.cron-time-hour').val(v['hour']);
-                        if (useGentleSelect) btgt.gentleSelect('update');
+                        if (useGentleSelect) {
+                            btgt.gentleSelect('update');
+                        }
 
                         btgt = block[tgt].find('select.cron-time-min').val(v['mins']);
                         if (useGentleSelect) btgt.gentleSelect('update');
@@ -507,7 +510,9 @@
 
             // trigger change event
             var bp = block['period'].find('select').val(t);
-            if (useGentleSelect) bp.gentleSelect('update');
+            if (useGentleSelect) {
+                bp.gentleSelect('update');
+            }
             bp.trigger('change');
 
             return this;

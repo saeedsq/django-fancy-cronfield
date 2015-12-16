@@ -254,7 +254,7 @@
             var root = $this.data('root');
             var opts = root.data('options');
             if (!root.attr('multiple')) {
-                if (opts.closeEffect == 'fade') {
+                if (opts.closeEffect === 'fade') {
                     $this.fadeOut(opts.closeSpeed);
                 } else {
                     $this.slideUp(opts.closeSpeed);
