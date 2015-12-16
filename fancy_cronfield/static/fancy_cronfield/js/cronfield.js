@@ -102,7 +102,7 @@
             if (id.indexOf('__prefix__') === -1) {
                 var options = {};
                 for (var key in options_mapping) {
-                    if(options_mapping.hasOwnProperty(key)) {
+                    if (options_mapping.hasOwnProperty(key)) {
                         var value = options_mapping[key];
                         options[key] = $(this).attr(value) !== undefined;
                         options[key] = options[key] && $(this).attr(value) !== '0';

@@ -500,8 +500,10 @@
                         }
 
                         btgt = block[tgt].find('select.cron-time-min').val(v['mins']);
-                        if (useGentleSelect) btgt.gentleSelect('update');
-                    } else {;
+                        if (useGentleSelect) {
+                            btgt.gentleSelect('update');
+                        }
+                    } else {
                         btgt = block[tgt].find('select').val(v[tgt]);
                         if (useGentleSelect) btgt.gentleSelect('update');
                     }
