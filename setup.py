@@ -25,10 +25,11 @@ CLASSIFIERS = [
     'Framework :: Django :: 1.6',
     'Framework :: Django :: 1.7',
     'Framework :: Django :: 1.8',
+    'Framework :: Django :: 1.9',
 ]
 
 INSTALL_REQUIREMENTS = [
-    'django>=1.5,<1.9',
+    'django>=1.5,<2.0',
     'python-crontab==1.9.3',
 ]
 

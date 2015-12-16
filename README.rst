@@ -54,7 +54,7 @@ Features
 Requirements
 ************
 
-Fancy cron field requires Django version 1.5 up to 1.8.7, Python 2.6, 2.7, 3.3,
+Fancy cron field requires Django version 1.5 up to 1.9, Python 2.6, 2.7, 3.3,
 3.4 and python-crontab 1.9.3.
 
 *************
