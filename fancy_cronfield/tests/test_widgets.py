@@ -6,7 +6,6 @@ Tests for `fancy_cronfield` widgets
 """
 import copy
 
-from django.forms import TextInput
 from django.test import SimpleTestCase
 
 from fancy_cronfield.widgets import CronWidget
@@ -21,10 +20,10 @@ class CronWidgetTests(SimpleTestCase):
 
     def test_render(self):
         html = '<input data-fancy="cron" type="hidden" name="timing"'
-        html += ' id="id_timing" data-allow_multiple_dom'
-        html += ' data-allow_multiple_dow data-allow_multiple_hour'
-        html += ' data-allow_multiple_minute data-allow_multiple_month'
-        html += ' data-use_gentle_select />'
+        html += ' id="id_timing" data-allow_multiple_dom="1"'
+        html += ' data-allow_multiple_dow="1" data-allow_multiple_hour="1"'
+        html += ' data-allow_multiple_minute="1" data-allow_multiple_month="1"'
+        html += ' data-use_gentle_select="1" />'
 
         self.check_html(
             widget=self.widget, name='timing', value='', html=html,
@@ -33,10 +32,10 @@ class CronWidgetTests(SimpleTestCase):
 
     def test_render_none(self):
         html = '<input data-fancy="cron" type="hidden" name="timing"'
-        html += ' id="id_timing" data-allow_multiple_dom'
-        html += ' data-allow_multiple_dow data-allow_multiple_hour'
-        html += ' data-allow_multiple_minute data-allow_multiple_month'
-        html += ' data-use_gentle_select />'
+        html += ' id="id_timing" data-allow_multiple_dom="1"'
+        html += ' data-allow_multiple_dow="1" data-allow_multiple_hour="1"'
+        html += ' data-allow_multiple_minute="1" data-allow_multiple_month="1"'
+        html += ' data-use_gentle_select="1" />'
 
         self.check_html(
             widget=self.widget, name='timing', value=None,
@@ -45,10 +44,10 @@ class CronWidgetTests(SimpleTestCase):
 
     def test_render_custom_attrs(self):
         html = '<input data-fancy="cron" type="hidden" name="timing"'
-        html += ' id="id_timing" data-allow_multiple_dom'
-        html += ' data-allow_multiple_dow data-allow_multiple_hour'
-        html += ' data-allow_multiple_minute data-allow_multiple_month'
-        html += ' data-use_gentle_select class="fun"/>'
+        html += ' id="id_timing" data-allow_multiple_dom="1"'
+        html += ' data-allow_multiple_dow="1" data-allow_multiple_hour="1"'
+        html += ' data-allow_multiple_minute="1" data-allow_multiple_month="1"'
+        html += ' data-use_gentle_select="1" class="fun"/>'
 
         self.check_html(
             widget=self.widget, name='timing', value='',
@@ -59,10 +58,10 @@ class CronWidgetTests(SimpleTestCase):
         self.maxDiff = None
         widget = CronWidget(attrs={'id': 'id_timing', 'class': 'fun'})
         html = '<input data-fancy="cron" type="hidden" name="timing"'
-        html += ' id="id_timing" data-allow_multiple_dom'
-        html += ' data-allow_multiple_dow data-allow_multiple_hour'
-        html += ' data-allow_multiple_minute data-allow_multiple_month'
-        html += ' data-use_gentle_select class="fun"/>'
+        html += ' id="id_timing" data-allow_multiple_dom="1"'
+        html += ' data-allow_multiple_dow="1" data-allow_multiple_hour="1"'
+        html += ' data-allow_multiple_minute="1" data-allow_multiple_month="1"'
+        html += ' data-use_gentle_select="1" class="fun"/>'
         self.check_html(widget=widget, name='timing', value='', html=html)
 
     def test_attrs_precedence(self):
@@ -72,10 +71,10 @@ class CronWidgetTests(SimpleTestCase):
         """
         widget = CronWidget(attrs={'id': 'id_timing', 'class': 'pretty'})
         html = '<input data-fancy="cron" type="hidden" name="timing"'
-        html += ' id="id_timing" data-allow_multiple_dom'
-        html += ' data-allow_multiple_dow data-allow_multiple_hour'
-        html += ' data-allow_multiple_minute data-allow_multiple_month'
-        html += ' data-use_gentle_select class="special"/>'
+        html += ' id="id_timing" data-allow_multiple_dom="1"'
+        html += ' data-allow_multiple_dow="1" data-allow_multiple_hour="1"'
+        html += ' data-allow_multiple_minute="1" data-allow_multiple_month="1"'
+        html += ' data-use_gentle_select="1" class="special"/>'
         self.check_html(
             widget=widget, name='timing', value='',
             html=html, attrs={'id': 'id_timing', 'class': 'special'},

@@ -104,6 +104,7 @@
                 for (var key in options_mapping) {
                     var value = options_mapping[key];
                     options[key] = $(this).attr(value) !== undefined;
+                    options[key] = options[key] && $(this).attr(value) !== '0';
                 }
                 $(this).cron_field(options);
             }

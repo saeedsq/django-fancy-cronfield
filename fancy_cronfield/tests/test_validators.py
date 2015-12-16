@@ -46,7 +46,7 @@ class CronValidatorTestCases(TestCase):
             for cron in crons:
                 self.cron_validator(cron)
         except ValidationError:
-            self.fail("CronValidator raised ValidationError for %s" % cron)
+            self.fail("CronValidator raised ValidationError for %s" % crons)
 
     def test_invalid_cron_format(self):
         """

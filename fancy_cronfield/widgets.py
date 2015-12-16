@@ -29,9 +29,10 @@ class CronWidget(forms.TextInput):
         attrs = attrs if attrs is not None else {}
         attrs.update({'data-fancy': 'cron'})
         for key in self.options.keys():
-            attrs.update({
-                'data-%s' % key: self.options.get(key)
-            })
+            if self.options.get(key):
+                attrs.update({
+                    'data-%s' % key: '1'
+                })
         super(CronWidget, self).__init__(attrs)
 
     def __deepcopy__(self, memo):
