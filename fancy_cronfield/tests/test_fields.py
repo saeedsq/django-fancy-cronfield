@@ -6,6 +6,7 @@ from django.utils import six
 from django.utils.functional import lazy
 
 from fancy_cronfield.fields import CronField
+from fancy_cronfield.utils.compat import DJANGO_1_6, DJANGO_1_5
 from fancy_cronfield.widgets import CronWidget
 
 
@@ -19,14 +20,26 @@ class CronFieldTests(TestCase):
         self.assertEqual(field.to_python('0 0 1 1 *'), '0 0 1 1 *')
 
     def test_get_prep_value(self):
-        lazy_func = lazy(lambda: u'0 0 1 1 *', six.text_type)
         field = CronField()
-        self.assertIsInstance(field.get_prep_value(lazy_func()), six.text_type)
+
+        if DJANGO_1_5 and DJANGO_1_6:
+            value = field.get_prep_value(six.text_type('0 0 1 1 *'))
+        else:
+            lazy_func = lazy(lambda: u'0 0 1 1 *', six.text_type)
+            value = lazy_func()
+
+        self.assertIsInstance(value, six.string_types)
 
     def test_get_prep_value_int(self):
-        lazy_func = lazy(lambda: 0, int)
         field = CronField()
-        self.assertIsInstance(field.get_prep_value(lazy_func()), six.text_type)
+
+        if DJANGO_1_5 and DJANGO_1_6:
+            value = field.get_prep_value(int(0))
+        else:
+            lazy_func = lazy(lambda: 0, int)
+            value = lazy_func()
+
+        self.assertIsInstance(value, six.text_type)
 
     def test_max_length_passed_to_formfield(self):
         """
