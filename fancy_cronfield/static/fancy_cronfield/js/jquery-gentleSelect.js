@@ -37,7 +37,7 @@
     };
 
     function defined(obj) {
-        if (typeof obj == 'undefined') { return false; }
+        if (typeof obj === 'undefined') { return false; }
         else { return true; }
     }
 
@@ -54,25 +54,25 @@
             $.error("gentleSelect: itemWidth must be supplied if 'rows' is specified");
             return true;
         }
-        if (!defined(o.openSpeed) || typeof o.openSpeed != 'number' &&
-                (typeof o.openSpeed == 'string' && (o.openSpeed != 'slow' && o.openSpeed != 'fast'))) {
+        if (!defined(o.openSpeed) || typeof o.openSpeed !== 'number' &&
+                (typeof o.openSpeed === 'string' && (o.openSpeed !== 'slow' && o.openSpeed !== 'fast'))) {
             $.error('gentleSelect: openSpeed must be an integer or \"slow\" or \"fast\"');
             return true;
         }
-        if (!defined(o.closeSpeed) || typeof o.closeSpeed != 'number' &&
-                (typeof o.closeSpeed == 'string' && (o.closeSpeed != 'slow' && o.closeSpeed != 'fast'))) {
+        if (!defined(o.closeSpeed) || typeof o.closeSpeed !== 'number' &&
+                (typeof o.closeSpeed === 'string' && (o.closeSpeed !== 'slow' && o.closeSpeed !== 'fast'))) {
             $.error('gentleSelect: closeSpeed must be an integer or \"slow\" or \"fast\"');
             return true;
         }
-        if (!defined(o.openEffect) || (o.openEffect != 'fade' && o.openEffect != 'slide')) {
+        if (!defined(o.openEffect) || (o.openEffect !== 'fade' && o.openEffect !== 'slide')) {
             $.error("gentleSelect: openEffect must be either 'fade' or 'slide'!");
             return true;
         }
-        if (!defined(o.closeEffect) || (o.closeEffect != 'fade' && o.closeEffect != 'slide')) {
+        if (!defined(o.closeEffect) || (o.closeEffect !== 'fade' && o.closeEffect !== 'slide')) {
             $.error("gentleSelect: closeEffect must be either 'fade' or 'slide'!");
             return true;
         }
-        if (!defined(o.hideOnMouseOut) || (typeof o.hideOnMouseOut != 'boolean')) {
+        if (!defined(o.hideOnMouseOut) || (typeof o.hideOnMouseOut !== 'boolean')) {
             $.error('gentleSelect: hideOnMouseOut must be supplied and either \"true\" or \"false\"!');
             return true;
         }
@@ -90,11 +90,12 @@
         if (elemList.length < 1) { return opts.prompt; }
 
         // Truncate if exceed maxDisplay
-        if (opts.maxDisplay != 0 && elemList.length > opts.maxDisplay) {
-            var arr = elemList.slice(0, opts.maxDisplay).map(function() {return $(this).text();});
+        var arr;
+        if (opts.maxDisplay !== 0 && elemList.length > opts.maxDisplay) {
+            arr = elemList.slice(0, opts.maxDisplay).map(function() {return $(this).text();});
             arr.push('...');
         } else {
-            var arr = elemList.map(function() {return $(this).text();});
+            arr = elemList.map(function() {return $(this).text();});
         }
         return arr.get().join(', ');
     }
@@ -108,7 +109,7 @@
             this.hide(); // hide original select box
 
             // initialise <span> to replace select box
-            label_text = getSelectedAsText(this.find(':selected'), o);
+            var label_text = getSelectedAsText(this.find(':selected'), o);
             var label = $("<span class='gentleselect-label'>" + label_text + '</span>')
                 .insertBefore(this)
                 .bind('mouseenter.gentleselect', event_handlers.labelHoverIn)
@@ -150,12 +151,15 @@
                 actualWidth += parseInt(f.css('padding-left'));
                 actualWidth += parseInt(f.css('padding-right'));
                 var elemCount = ul.find('li').length;
+                var cols;
+                var rows;
+
                 if (defined(o.columns)) {
-                    var cols = parseInt(o.columns);
-                    var rows = Math.ceil(elemCount / cols);
+                    cols = parseInt(o.columns);
+                    rows = Math.ceil(elemCount / cols);
                 } else {
-                    var rows = parseInt(o.rows);
-                    var cols = Math.ceil(elemCount / rows);
+                    rows = parseInt(o.rows);
+                    cols = Math.ceil(elemCount / rows);
                 }
                 dialog.width(actualWidth * cols);
 
@@ -177,7 +181,7 @@
                     }
                     idx++;
                 });
-            } else if (typeof o.minWidth == 'number') {
+            } else if (typeof o.minWidth === 'number') {
                 dialog.css('min-width', o.minWidth);
             }
 
@@ -200,7 +204,7 @@
             var v = (this.attr('multiple')) ? this.val() : [this.val()];
             $('li', this.data('dialog')).each(function() {
                 var $li = $(this);
-                var isSelected = ($.inArray($li.data('value'), v) != -1);
+                var isSelected = ($.inArray($li.data('value'), v) !== -1);
                 $li.toggleClass('selected', isSelected);
             });
 
@@ -230,7 +234,7 @@
             var dialog = root.data('dialog')
                 .css('top', pos.top + $this.height())
                 .css('left', pos.left + 1);
-            if (opts.openEffect == 'fade') {
+            if (opts.openEffect === 'fade') {
                 dialog.fadeIn(opts.openSpeed);
             } else {
                 dialog.slideDown(opts.openSpeed);
@@ -272,7 +276,7 @@
                 } else {
                     $this.find('li.selected').removeClass('selected');
                     clicked.addClass('selected');
-                    label.text(clicked.data('name'));
+                    label.text(name);
                     // update actual selectbox and trigger change event
                     root.val(value).trigger('change');
                 }
@@ -280,7 +284,7 @@
         },
 
         keyUp: function(e) {
-            if (e.keyCode == 27) { // ESC
+            if (e.keyCode === 27) { // ESC
                 $('.gentleselect-dialog').hide();
             }
         }

@@ -93,18 +93,20 @@
         useGentleSelect: 'data-use_gentle_select'
     };
     $.fn.setup_cron_fields = function() {
-        this.each(function(index) {
+        this.each(function() {
             var id = $(this).attr('id');
             if (id === undefined) {
-                id = (((1 + Math.random()) * 0x10000) | 0);
+                id = Math.floor((Math.random() * 1000000) + 1);
                 $(this).attr('id', id);
             }
-            if (id.indexOf('__prefix__') == -1) {
+            if (id.indexOf('__prefix__') === -1) {
                 var options = {};
                 for (var key in options_mapping) {
-                    var value = options_mapping[key];
-                    options[key] = $(this).attr(value) !== undefined;
-                    options[key] = options[key] && $(this).attr(value) !== '0';
+                    if(options_mapping.hasOwnProperty(key)) {
+                        var value = options_mapping[key];
+                        options[key] = $(this).attr(value) !== undefined;
+                        options[key] = options[key] && $(this).attr(value) !== '0';
+                    }
                 }
                 $(this).cron_field(options);
             }

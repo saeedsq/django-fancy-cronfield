@@ -113,25 +113,26 @@
 
     // options for hours in a day
     var str_opt_hid = '';
-    for (var i = 0; i < 24; i++) {
-        var j = (i < 10) ? '0' : '';
+    for (i = 0; i < 24; i++) {
+        j = (i < 10) ? '0' : '';
         str_opt_hid += "<option value='" + i + "'>" + j + i + '</option>\n';
     }
 
     // options for days of month
     var str_opt_dom = '';
-    for (var i = 1; i < 32; i++) {
-        if (i == 1 || i == 21 || i == 31) {
-            var display = gettext('%(day)sst');
+    for (i = 1; i < 32; i++) {
+        var display = '';
+        if (i === 1 || i === 21 || i === 31) {
+            display = gettext('%(day)sst');
         }
-        else if (i == 2 || i == 22) {
-            var display = gettext('%(day)snd');
+        else if (i === 2 || i === 22) {
+            display = gettext('%(day)snd');
         }
-        else if (i == 3 || i == 23) {
-            var display = gettext('%(day)srd');
+        else if (i === 3 || i === 23) {
+            display = gettext('%(day)srd');
         }
         else {
-            var display = gettext('%(day)sth');
+            display = gettext('%(day)sth');
         }
         str_opt_dom += "<option value='" + i + "'>";
         str_opt_dom += interpolate(display, {'day': i}, true);
@@ -191,25 +192,25 @@
 
     // ------------------ internal functions ---------------
     function defined(obj) {
-        if (typeof obj == 'undefined') { return false; }
+        if (typeof obj === 'undefined') { return false; }
         else { return true; }
     }
 
     function undefinedOrObject(obj) {
-        return (!defined(obj) || typeof obj == 'object');
+        return (!defined(obj) || typeof obj === 'object');
     }
 
     function getCronType(cron_str, opts) {
         // if customValues defined, check for matches there first
         if (defined(opts.customValues)) {
             for (key in opts.customValues) {
-                if (cron_str == opts.customValues[key]) { return key; }
+                if (cron_str === opts.customValues[key]) { return key; }
             }
         }
 
         // check format of initial cron value
         var valid_cron = /^((\d{1,2}|\*)\s){4}(\d{1,2}|\*)$/;
-        if (typeof cron_str != 'string' || !valid_cron.test(cron_str)) {
+        if (typeof cron_str !== 'string' || !valid_cron.test(cron_str)) {
             $.error('cron: invalid initial value');
             return undefined;
         }
@@ -230,10 +231,17 @@
         ];
 
         for (var i = 0; i < d.length; i++) {
-            if (d[i] == '*') continue;
+            if (d[i] === '*') {
+                continue;
+            }
             var v = parseInt(d[i], 10);
-            if (defined(v) && v <= maxval[i] && v >= minval[i]) continue;
-            if (mulval[i] || d[i].indexOf(',') === -1) continue;
+            if (defined(v) && v <= maxval[i] && v >= minval[i]) {
+                continue;
+            }
+
+            if (mulval[i] || d[i].indexOf(',') === -1) {
+                continue;
+            }
 
             var error_msg = 'cron: invalid value found (col ' + (i + 1);
             error_msg += ') in ' + opts.initial;
@@ -271,7 +279,7 @@
 
     function getCurrentValue(c) {
         var b = c.data('block');
-        var min = hour = day = month = dow = '*';
+        var min = '*', hour = '*', day = '*', month = '*', dow = '*';
         var selectedPeriod = b['period'].find('select').val();
         switch (selectedPeriod) {
             case 'minute':
@@ -338,7 +346,9 @@
             var block = [], custom_periods = '', cv = o.customValues;
             if (defined(cv)) { // prepend custom values if specified
                 for (var key in cv) {
-                    custom_periods += "<option value='" + cv[key] + "'>" + key + '</option>\n';
+                    if(cv.hasOwnProperty(key)) {
+                        custom_periods += "<option value='" + cv[key] + "'>" + key + '</option>\n';
+                    }
                 }
             }
 
@@ -350,62 +360,77 @@
             var select = block['period'].find('select');
             select.bind('change.cron', event_handlers.periodChanged)
                   .data('root', this);
-            if (o.useGentleSelect) select.gentleSelect(eo);
+            if (o.useGentleSelect) {
+                select.gentleSelect(eo);
+            }
 
             var mul_dom = '';
-            if (o.allowMultiple_all || o.allowMultiple_dom)
+            if (o.allowMultiple_all || o.allowMultiple_dom) {
                 mul_dom = " multiple='multiple'";
+            }
 
-            var html = "<span class='cron-block cron-block-dom'>";
+            html = "<span class='cron-block cron-block-dom'>";
             html += ' ' + gettext('on the') + " <select name='cron-dom'";
             html += mul_dom + '>' + str_opt_dom + '</select> </span>';
             block['dom'] = $(html).appendTo(this).data('root', this);
 
             select = block['dom'].find('select').data('root', this);
-            if (o.useGentleSelect) select.gentleSelect(o.domOpts);
+            if (o.useGentleSelect) {
+                select.gentleSelect(o.domOpts);
+            }
 
             var mul_month = '';
-            if (o.allowMultiple_all || o.allowMultiple_month)
+            if (o.allowMultiple_all || o.allowMultiple_month) {
                 mul_month = " multiple='multiple'";
+            }
 
-            var html = "<span class='cron-block cron-block-month'>";
+            html = "<span class='cron-block cron-block-month'>";
             html += ' ' + gettext('of') + " <select name='cron-month'";
             html += mul_month + '>' + str_opt_month + '</select> </span>';
             block['month'] = $(html).appendTo(this).data('root', this);
 
             select = block['month'].find('select').data('root', this);
-            if (o.useGentleSelect) select.gentleSelect(o.monthOpts);
+            if (o.useGentleSelect) {
+                select.gentleSelect(o.monthOpts);
+            }
 
             var mul_minute = '';
-            if (o.allowMultiple_all || o.allowMultiple_minute)
+            if (o.allowMultiple_all || o.allowMultiple_minute) {
                 mul_minute = " multiple='multiple'";
+            }
 
-            var html = "<span class='cron-block cron-block-mins'>";
+            html = "<span class='cron-block cron-block-mins'>";
             html += ' ' + gettext('at') + " <select name='cron-mins'";
             html += mul_minute + '>' + str_opt_mih + '</select> ';
             html += gettext('minutes past the hour') + ' </span>';
             block['mins'] = $(html).appendTo(this).data('root', this);
 
             select = block['mins'].find('select').data('root', this);
-            if (o.useGentleSelect) select.gentleSelect(o.minuteOpts);
+            if (o.useGentleSelect) {
+                select.gentleSelect(o.minuteOpts);
+            }
 
             var mul_dow = '';
-            if (o.allowMultiple_all || o.allowMultiple_dow)
+            if (o.allowMultiple_all || o.allowMultiple_dow) {
                 mul_dow = " multiple='multiple'";
+            }
 
-            var html = "<span class='cron-block cron-block-dow'>";
+            html = "<span class='cron-block cron-block-dow'>";
             html += ' ' + gettext('on') + " <select name='cron-dow'";
             html += mul_dow + '>' + str_opt_dow + '</select> </span>';
             block['dow'] = $(html).appendTo(this).data('root', this);
 
             select = block['dow'].find('select').data('root', this);
-            if (o.useGentleSelect) select.gentleSelect(o.dowOpts);
+            if (o.useGentleSelect) {
+                select.gentleSelect(o.dowOpts);
+            }
 
             var mul_hour = '';
-            if (o.allowMultiple_all || o.allowMultiple_hour)
+            if (o.allowMultiple_all || o.allowMultiple_hour) {
                 mul_hour = " multiple='multiple'";
+            }
 
-            var html = "<span class='cron-block cron-block-time'>";
+            html = "<span class='cron-block cron-block-time'>";
             html += ' ' + gettext('at');
             html += " <select name='cron-time-hour' class='cron-time-hour'";
             html += mul_hour + '>' + str_opt_hid;
@@ -415,11 +440,15 @@
             block['time'] = $(html).appendTo(this).data('root', this);
 
             select = block['time'].find('select.cron-time-hour').data('root', this);
-            if (o.useGentleSelect) select.gentleSelect(o.timeHourOpts);
+            if (o.useGentleSelect) {
+                select.gentleSelect(o.timeHourOpts);
+            }
             select = block['time'].find('select.cron-time-min').data('root', this);
-            if (o.useGentleSelect) select.gentleSelect(o.timeMinuteOpts);
+            if (o.useGentleSelect) {
+                select.gentleSelect(o.timeMinuteOpts);
+            }
 
-            var html = "<span class='cron-controls'>&laquo; save ";
+            html = "<span class='cron-controls'>&laquo; save ";
             html += "<span class='cron-button cron-button-save'></span>";
             html += ' </span>';
             block['controls'] = $(html).appendTo(this).data('root', this)
@@ -462,14 +491,15 @@
                 var targets = toDisplay[t];
                 for (var i = 0; i < targets.length; i++) {
                     var tgt = targets[i];
-                    if (tgt == 'time') {
-                        var btgt = block[tgt].find('select.cron-time-hour').val(v['hour']);
+                    var btgt;
+                    if (tgt === 'time') {
+                        btgt = block[tgt].find('select.cron-time-hour').val(v['hour']);
                         if (useGentleSelect) btgt.gentleSelect('update');
 
                         btgt = block[tgt].find('select.cron-time-min').val(v['mins']);
                         if (useGentleSelect) btgt.gentleSelect('update');
                     } else {;
-                        var btgt = block[tgt].find('select').val(v[tgt]);
+                        btgt = block[tgt].find('select').val(v[tgt]);
                         if (useGentleSelect) btgt.gentleSelect('update');
                     }
                 }
@@ -488,8 +518,8 @@
     var event_handlers = {
         periodChanged: function() {
             var root = $(this).data('root');
-            var block = root.data('block'),
-                opt = root.data('options');
+            var block = root.data('block');
+            // var opt = root.data('options');
             var period = $(this).val();
 
             root.find('span.cron-block').hide(); // first, hide all blocks
@@ -502,10 +532,10 @@
         },
 
         somethingChanged: function() {
-            root = $(this).data('root');
+            var root = $(this).data('root');
             // if AJAX url defined, show "save"/"reset" button
             if (defined(root.data('options').url_set)) {
-                if (methods.value.call(root) != root.data('current_value')) { // if changed
+                if (methods.value.call(root) !== root.data('current_value')) { // if changed
                     root.addClass('cron-changed');
                     root.data('block')['controls'].fadeIn();
                 } else { // values manually reverted
@@ -539,7 +569,7 @@
                     root.data('current_value', cron_str);
                     btn.removeClass('cron-loading');
                     // data changed since "save" clicked?
-                    if (cron_str == methods.value.call(root)) {
+                    if (cron_str === methods.value.call(root)) {
                         root.removeClass('cron-changed');
                         root.data('block').controls.fadeOut();
                     }
