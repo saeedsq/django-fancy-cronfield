@@ -41,7 +41,7 @@ setup(
     author="Saeed Salehian",
     author_email="saeed.sq@gmail.com",
     version=fancy_cronfield.__version__,
-    description="A nice and customizable cronfield",
+    description="A nice and customizable cron field with easy to use UI",
     long_description=long_description,
     url='https://github.com/saeedsq/django-fancy-cronfield',
     license='BSD License',
