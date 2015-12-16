@@ -22,22 +22,22 @@ class CronFieldTests(TestCase):
     def test_get_prep_value(self):
         field = CronField()
 
-        if DJANGO_1_5 and DJANGO_1_6:
+        if DJANGO_1_5 or DJANGO_1_6:
             value = field.get_prep_value(six.text_type('0 0 1 1 *'))
         else:
             lazy_func = lazy(lambda: u'0 0 1 1 *', six.text_type)
-            value = lazy_func()
+            value = field.get_prep_value(lazy_func())
 
         self.assertIsInstance(value, six.string_types)
 
     def test_get_prep_value_int(self):
         field = CronField()
 
-        if DJANGO_1_5 and DJANGO_1_6:
+        if DJANGO_1_5 or DJANGO_1_6:
             value = field.get_prep_value(int(0))
         else:
             lazy_func = lazy(lambda: 0, int)
-            value = lazy_func()
+            value = field.get_prep_value(lazy_func())
 
         self.assertIsInstance(value, six.text_type)
 
