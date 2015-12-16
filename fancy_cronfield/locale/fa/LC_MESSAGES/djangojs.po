@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 01:28+0330\n"
+"POT-Creation-Date: 2015-12-16 23:16+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,206 +20,208 @@ msgstr ""
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:49
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:3
 msgid "Minutes Past the Hour"
-msgstr ""
+msgstr "دقیقه بعد از ساعت"
 
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:56
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:3
 msgid "Time: Hour"
-msgstr ""
+msgstr "زمان: ساعت"
 
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:63
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:3
 msgid "Day of Month"
-msgstr ""
+msgstr "روز ماه"
 
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:84
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:4
 msgid "Time: Minute"
-msgstr ""
+msgstr "زمان: دقیقه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:125
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:127
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "%(day)sst"
-msgstr ""
+msgstr "%(day)sام"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:128
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:130
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "%(day)snd"
-msgstr ""
+msgstr "%(day)sام"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:131
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:133
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "%(day)srd"
-msgstr ""
+msgstr "%(day)sام"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:134
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:136
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "%(day)sth"
-msgstr ""
+msgstr "%(day)sام"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:143
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "January"
-msgstr ""
+msgstr "ژانویه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:143
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "February"
-msgstr ""
+msgstr "فوریه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:143
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "March"
-msgstr ""
+msgstr "مارچ"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:144
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:146
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "April"
-msgstr ""
+msgstr "آوریل"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:144
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:146
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "May"
-msgstr ""
+msgstr "می"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:144
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:146
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
 msgid "June"
-msgstr ""
-
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
-msgid "July"
-msgstr ""
-
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
-msgid "August"
-msgstr ""
-
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:145
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
-msgid "September"
-msgstr ""
-
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:146
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
-msgid "October"
-msgstr ""
-
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:146
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
-msgid "November"
-msgstr ""
+msgstr "جوئن"
 
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:147
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "July"
+msgstr "جولای"
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:147
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "August"
+msgstr "آگوست"
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:147
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "September"
+msgstr "سپتامبر"
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:148
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:5
+msgid "October"
+msgstr "اکتبر"
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:148
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
+msgid "November"
+msgstr "نوامبر"
+
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:149
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "December"
-msgstr ""
+msgstr "دسامبر"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:156
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:158
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "Sunday"
-msgstr ""
+msgstr "یکشنبه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:156
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:158
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "Monday"
-msgstr ""
+msgstr "دوشنبه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:156
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:158
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "Tuesday"
-msgstr ""
+msgstr "سه شنبه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:157
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:159
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "Wednesday"
-msgstr ""
+msgstr "چهارشنبه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:157
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:159
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "Thursday"
-msgstr ""
+msgstr "پنج شنبه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:158
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:160
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "Friday"
-msgstr ""
+msgstr "جمعه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:158
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:160
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "Saturday"
-msgstr ""
+msgstr "شنبه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:165
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:167
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "minute"
-msgstr ""
+msgstr "دقیقه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:165
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:167
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "hour"
-msgstr ""
+msgstr "ساعت"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:165
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:167
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "day"
-msgstr ""
+msgstr "روز"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:166
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:168
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "week"
-msgstr ""
+msgstr "هفته"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:166
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:168
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "month"
-msgstr ""
+msgstr "ماه"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:166
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:168
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:6
 msgid "year"
-msgstr ""
+msgstr "سال"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:345
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:356
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:8
 msgid "Every"
-msgstr ""
+msgstr "هر"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:360
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:374
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:9
 msgid "on the"
-msgstr ""
+msgstr "در"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:372
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:389
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:10
 msgid "of"
-msgstr ""
+msgstr "از"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:384
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:409
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:404
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:435
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:10
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:12
 msgid "at"
-msgstr ""
+msgstr "در"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:386
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:10
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:406
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:11
 msgid "minutes past the hour"
-msgstr ""
+msgstr "دقیقه بعد از ساعت"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:397
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:420
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:11
 msgid "on"
-msgstr ""
+msgstr "در"
 
-#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:548
+#: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.js:583
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-cron.min.js:18
-msgid "An error occured when submitting your request. Try again?"
-msgstr ""
+#, fuzzy
+#| msgid "An error occured when submitting your request. Try again?"
+msgid "An error occurred when submitting your request. Try again?"
+msgstr "خطایی در حال انجام درخواست شما رخ داده است. لطفا دوباره سعی کنید."
 
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-gentleSelect.js:30
 #: .\fancy_cronfield\static\fancy_cronfield\js\jquery-gentleSelect.min.js:4
 msgid "Make A Selection"
-msgstr ""
+msgstr "انتخاب کنید"

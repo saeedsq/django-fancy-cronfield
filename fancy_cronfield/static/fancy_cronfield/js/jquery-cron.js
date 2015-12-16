@@ -580,7 +580,7 @@
                     }
                 },
                 error: function() {
-                    alert(gettext('An error occured when submitting your request. Try again?'));
+                    alert(gettext('An error occurred when submitting your request. Try again?'));
                     btn.removeClass('cron-loading');
                 }
             });
