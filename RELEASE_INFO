@@ -9,6 +9,7 @@
 - Check CHANGELOG that all closed PRs are present.
 - Prepare blog post, including "Release" tag
 - update AUTHORS file
+- Write release notes
 - Make a release commit
 - Tag release commit
 - Merge back into develop
