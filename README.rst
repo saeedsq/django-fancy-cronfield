@@ -45,6 +45,7 @@ A nice and customizable cron field with great, easy to use UI.
 Features
 ********
 
+- Cron widget providing nice gentle select UI
 - Cron format validation
 - Custom django field
 - Ability to specify a daily run limit
