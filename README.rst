@@ -57,6 +57,21 @@ Requirements
 Fancy cron field requires Django version 1.5 up to 1.8.7, Python 2.6, 2.7, 3.3,
 3.4 and python-crontab 1.9.3.
 
+*************
+Documentation
+*************
+
+Please head over to `documentation`_ for all the details on how to install,
+customize and use the django fancy cronfield.
+
+.. _documentation: http://django-fancy-cronfield.readthedocs.org/en/latest/
+
+********
+Tutorial
+********
+
+http://django-fancy-cronfield.readthedocs.org/en/latest/intro/index.html
+
 ************
 Installation
 ************
@@ -86,7 +101,8 @@ any regular model field:
 Getting Help
 ************
 
-Please Write to our `mailing list <https://groups.google.com/forum/#!forum/django-fancy-cronfield>`_.
+Please Write to our `mailing list
+<https://groups.google.com/forum/#!forum/django-fancy-cronfield>`_.
 
 *******
 Credits

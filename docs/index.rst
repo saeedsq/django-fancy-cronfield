@@ -21,12 +21,14 @@ refer to :doc:`/intro/index` and :doc:`/reference/index` sections.
 Join us online
 **************
 
-You can find us on our `mailing list <https://groups.google.com/forum/#!forum/django-fancy-cronfield>`_.
+You can find us on our `mailing list
+<https://groups.google.com/forum/#!forum/django-fancy-cronfield>`_.
 
 ********
 Features
 ********
 
+- Cron widget providing nice gentle select UI
 - Cron format validation
 - Custom django field
 - Ability to specify a daily run limit
