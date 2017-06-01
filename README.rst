@@ -15,15 +15,13 @@ Django Fancy Cron Field
     :target: https://pypi.python.org/pypi/django-fancy-cronfield/
 .. image:: https://img.shields.io/pypi/l/django-fancy-cronfield.svg
     :target: https://pypi.python.org/pypi/django-fancy-cronfield/
-.. image:: https://codecov.io/github/saeedsq/django-fancy-cronfield/coverage.svg?branch=develop
-    :target: https://codecov.io/github/saeedsq/django-fancy-cronfield?branch=develop
 .. image:: https://readthedocs.org/projects/django-fancy-cronfield/badge/?version=latest
     :target: http://django-fancy-cronfield.readthedocs.org/en/latest/?badge=latest
     :alt: Documentation Status
 .. image:: https://landscape.io/github/saeedsq/django-fancy-cronfield/develop/landscape.svg?style=flat
    :target: https://landscape.io/github/saeedsq/django-fancy-cronfield/develop
    :alt: Code Health
-.. image:: https://api.codacy.com/project/badge/grade/1c49af5cdb564cfe979d26384436c85f
+.. image:: https://api.codacy.com/project/badge/Grade/8db1bf7277d94d658c8672cbe53973d2
     :target: https://www.codacy.com/app/saeed-sq/django-fancy-cronfield
 .. image:: https://codeclimate.com/github/saeedsq/django-fancy-cronfield/badges/gpa.svg
    :target: https://codeclimate.com/github/saeedsq/django-fancy-cronfield
