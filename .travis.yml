@@ -18,7 +18,7 @@ install:
   - pip install -r "test_requirements/django-$DJANGO.txt"
 
 before_script:
-    - export CODACY_PROJECT_TOKEN=601e488b40614acda119fca134b67d06
+    - export CODACY_PROJECT_TOKEN=7b692e68ce0447dca28e27cb4944f35f
 
 script:
   - pep8 fancy_cronfield
